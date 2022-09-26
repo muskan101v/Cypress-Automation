@@ -30,6 +30,7 @@ describe("website testing ", () => {
         cy.wrap($el).click();
       }
     });
+    //autocomplete
     cy.get("#autocomplete").should("have.value", "India");
 
     //visible invisible

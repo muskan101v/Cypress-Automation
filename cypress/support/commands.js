@@ -11,6 +11,20 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add("selectProduct", (productName) => {
+  cy.get("h4.card-title").each(($e1, index, $list) => {
+    if ($e1.text().includes(productName)) {
+      cy.get("button.btn.btn-info").eq(index).click();
+    }
+  });
+});
+Cypress.Commands.add("loginApi", (options) => {
+  cy.request(options).then((res) => {
+    expect(res.status).to.equal(200);
+    Cypress.env("token", res.body.token);
+  });
+});
+
 //
 //
 // -- This is a child command --
