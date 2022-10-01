@@ -1,0 +1,85 @@
+[
+  {
+    "description": "    application Regression",
+    "keyword": "Feature",
+    "name": "End to end Ecommerce validation",
+    "line": 1,
+    "id": "end-to-end-ecommerce-validation",
+    "tags": [],
+    "uri": "ecommerce.feature",
+    "elements": [
+      {
+        "id": "end-to-end-ecommerce-validation;filling-the-form-to-shop",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Filling the form to shop",
+        "tags": [
+          {
+            "name": "@Smoke",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I open Ecommerce Page",
+            "result": {
+              "status": "passed",
+              "duration": 747000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "gender"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "bobz",
+                      "Male"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I fill the form details",
+            "result": {
+              "status": "passed",
+              "duration": 391000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "validate the forms behaviour",
+            "result": {
+              "status": "passed",
+              "duration": 190000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Select the shop page",
+            "result": {
+              "status": "passed",
+              "duration": 933000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

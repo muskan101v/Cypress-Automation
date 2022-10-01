@@ -21,5 +21,13 @@ describe("website testing ", () => {
     cy.get(".cart-icon > img").click();
     cy.contains("PROCEED TO CHECKOUT").click();
     cy.contains("Place Order").click();
+    cy.get("select").select("India").should("have.value", "India");
+    cy.get("input[type=checkbox]").check();
+    cy.get("input[type=checkbox]").should("be.checked");
+    cy.contains("Proceed").click();
+    cy.get(".wrapperTwo span").then((element) => {
+      const text = element.text();
+      expect(text.includes("successfully")).to.be.true;
+    });
   });
 });

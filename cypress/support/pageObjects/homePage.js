@@ -6,7 +6,7 @@ class HomePage {
     return cy.get(":nth-child(4) > .ng-pristine");
   }
   getGender() {
-    return cy.get("select");
+    return cy.get("#exampleFormControlSelect1");
   }
   getEnterprenourRadioButton() {
     return cy.get("#inlineRadio3");

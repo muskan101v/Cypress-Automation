@@ -4,15 +4,32 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "headTest": "npm run test --headed",
+    "chromeTest": "npm run test --browser chrome",
+    "GreenKartTest": "npm run test --spec \"cypress/integration/GreenKart/*\"",
+    "BasicTest": "npm run test --spec \"cypress/integration/BasicTest/*\"",
+    "SessionStorage": "npm run test --spec \"cypress/integration/SessionStorage/*\"",
+    "generateReport": "node cypress/cucumber-html-report.js"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^10.7.0"
+    "cypress": "^10.7.0",
+    "multiple-cucumber-html-reporter": "^2.0.0"
   },
   "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1"
   }
 }
